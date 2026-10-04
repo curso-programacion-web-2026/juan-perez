@@ -1,99 +1,89 @@
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Las Maravillas del Mundo Moderno</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Maravillas del Mundo</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <!-- Cabecera principal del sitio -->
-    <header>
-        <h1>Maravillas del Mundo Moderno</h1>
-        <p>Descubre las obras arquitectónicas más impresionantes de la humanidad.</p>
-        
-        <!-- Menú de navegación principal con enlaces de salto de página -->
-        <nav>
-            <ul>
-                <li><a href="#chichen-itza">Chichén Itzá</a></li>
-                <li><a href="#machu-picchu">Machu Picchu</a></li>
-                <li><a href="#gran-muralla">La Gran Muralla</a></li>
-                <li><a href="#coliseo">El Coliseo</a></li>
-            </ul>
-        </nav>
-    </header>
+  <!-- Encabezado y Barra de Accesibilidad/Tema -->
+  <header class="navbar">
+    <h1>Maravillas del Mundo</h1>
+    <div class="controls">
+      <button id="btn-font-increase" title="Aumentar tamaño de texto">A+</button>
+      <button id="btn-font-decrease" title="Disminuir tamaño de texto">A-</button>
+      <button id="btn-theme-toggle" title="Cambiar modo oscuro/claro">🌙 Modo Oscuro</button>
+    </div>
+  </header>
 
-    <!-- Contenido principal único de la página -->
-    <main>
-        
-        <!-- Sección que agrupa las maravillas -->
-        <section>
-            <h2>Grandes Construcciones Históricas</h2>
+  <main class="container">
 
-            <!-- Artículo 1: Chichén Itzá -->
-            <article id="chichen-itza">
-                <header>
-                    <h3>Chichén Itzá</h3>
-                    <p>Ubicación: <strong>Yucatán, México</strong></p>
-                </header>
-                <p>Una legendaria ciudad maya fundada hacia el año 500 a.C. Su templo principal, conocido como <em>El Castillo</em> o la Pirámide de Kukulkán, es famoso por los fenómenos astronómicos y acústicos diseñados por los mayas.</p>
-            </article>
+    <!-- Carrusel de Fotos -->
+    <section class="carousel-container">
+      <div class="carousel-slide active">
+        <img src="https://images.unsplash.com/photo-1564507592333-c60657eea523?auto=format&fit=crop&w=1200&q=80" alt="Taj Mahal">
+        <div class="carousel-caption">Taj Mahal - India</div>
+      </div>
+      <div class="carousel-slide">
+        <img src="https://images.unsplash.com/photo-1526392060635-9d6019884377?auto=format&fit=crop&w=1200&q=80" alt="Machu Picchu">
+        <div class="carousel-caption">Machu Picchu - Perú</div>
+      </div>
+      <div class="carousel-slide">
+        <img src="https://images.unsplash.com/photo-1552832230-c0197dd311b5?auto=format&fit=crop&w=1200&q=80" alt="Coliseo Romano">
+        <div class="carousel-caption">Coliseo Romano - Italia</div>
+      </div>
 
-            <!-- Artículo 2: Machu Picchu -->
-            <article id="machu-picchu">
-                <header>
-                    <h3>Machu Picchu</h3>
-                    <p>Ubicación: <strong>Cusco, Perú</strong></p>
-                </header>
-                <p>Antigua ciudad inca asentada en las alturas de los Andes. Construida a mediados del siglo XV, es considerada una obra maestra de la arquitectura y la ingeniería incaica.</p>
-            </article>
+      <button class="carousel-btn prev" id="prevBtn">&#10094;</button>
+      <button class="carousel-btn next" id="nextBtn">&#10095;</button>
+    </section>
 
-            <!-- Artículo 3: La Gran Muralla -->
-            <article id="gran-muralla">
-                <header>
-                    <h3>La Gran Muralla China</h3>
-                    <p>Ubicación: <strong>China</strong></p>
-                </header>
-                <p>Una impresionante red de fortificaciones construida a lo largo de más de 2,000 años para proteger las fronteras del Imperio chino contra los ataques de invasores nómadas.</p>
-            </article>
+    <!-- Sección de Tarjetas (Cards) -->
+    <section class="cards-grid">
 
-            <!-- Artículo 4: El Coliseo -->
-            <article id="coliseo">
-                <header>
-                    <h3>El Coliseo Romano</h3>
-                    <p>Ubicación: <strong>Roma, Italia</strong></p>
-                </header>
-                <p>El anfiteatro más grande jamás construido en el Imperio romano. Albergó luchas de gladiadores, recreaciones de batallas y espectáculos públicos durante más de 500 años.</p>
-            </article>
+      <!-- Card 1 -->
+      <article class="card">
+        <img src="https://images.unsplash.com/photo-1564507592333-c60657eea523?auto=format&fit=crop&w=600&q=80" alt="Taj Mahal" class="card-img">
+        <div class="card-body">
+          <h2 class="card-title">Taj Mahal</h2>
+          <p class="card-text">Un impresionante mausoleo de mármol blanco ubicado en Agra, India.</p>
+          <div class="more-content hidden">
+            <p>Fue construido por el emperador mogol Shah Jahan en memoria de su esposa favorita, Mumtaz Mahal. Es considerado una de las mayores obras maestras de la arquitectura islámica e hispano-musulmana.</p>
+          </div>
+          <button class="btn-read-more">Ver más</button>
+        </div>
+      </article>
 
-        </section>
+      <!-- Card 2 -->
+      <article class="card">
+        <img src="https://images.unsplash.com/photo-1526392060635-9d6019884377?auto=format&fit=crop&w=600&q=80" alt="Machu Picchu" class="card-img">
+        <div class="card-body">
+          <h2 class="card-title">Machu Picchu</h2>
+          <p class="card-text">Antigua ciudad inca ubicada en lo alto de los Andes peruanos.</p>
+          <div class="more-content hidden">
+            <p>Construida en el siglo XV, esta ciudadela de piedra sobre una cresta montañosa es famosa por sus sofisticados muros de piedra seca y sus vistas panorámicas.</p>
+          </div>
+          <button class="btn-read-more">Ver más</button>
+        </div>
+      </article>
 
-    </main>
+      <!-- Card 3 -->
+      <article class="card">
+        <img src="https://images.unsplash.com/photo-1552832230-c0197dd311b5?auto=format&fit=crop&w=600&q=80" alt="Coliseo Romano" class="card-img">
+        <div class="card-body">
+          <h2 class="card-title">Coliseo Romano</h2>
+          <p class="card-text">Anfiteatro de la época del Imperio Romano en el centro de Roma.</p>
+          <div class="more-content hidden">
+            <p>Tenía capacidad para miles de espectadores y albergaba espectáculos públicos como luchas de gladiadores, recreaciones de batallas e interpretaciones dramáticas.</p>
+          </div>
+          <button class="btn-read-more">Ver más</button>
+        </div>
+      </article>
 
-    <!-- Contenido secundario / barra lateral -->
-    <aside>
-        <h3>¿Sabías qué?</h3>
-        <p>Las 7 maravillas del mundo moderno fueron elegidas en 2007 mediante un voto global organizado por la fundación <em>New Open World Corporation</em>, en el que participaron más de 100 millones de personas.</p>
-    </aside>
-    <!-- Ejemplo de tabla -->
-    <table>
-    <tr>
-        <th>Nombre</th>
-        <th>Edad</th>
-    </tr>
-    <tr>
-        <td>Ana</td>
-        <td>25</td>
-    </tr>
-    <tr>
-        <td>Luis</td>
-        <td>30</td>
-    </tr>
-    </table>    
-    <!-- Pie de página -->
-    <footer>
-        <p>&copy; 2026 Guía Educativa de Ciencias Sociales y Geografía.</p>
-    </footer>
+    </section>
+  </main>
 
+  <script src="script.js"></script>
 </body>
 </html>
